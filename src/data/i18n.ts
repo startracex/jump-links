@@ -5,18 +5,18 @@ const dict = {
     back: "返回",
     about: "关于",
     jump: "跳转",
-    jump_to:"即将访问: {{ url }}",
+    jump_to: "即将访问: {{ url }}",
   },
   en: {
     back: "Back",
     about: "About",
     jump: "Jump",
-    jump_to:"Just about to visit: {{ url }}",
+    jump_to: "Just about to visit: {{ url }}",
   },
 };
 const lang_enabled = ['zh', 'en'];
 const getLang = () => {
-  let lang = parmas.lang ?? localStorage.getItem('lang');
+  let lang = parmas.lang || localStorage.getItem('lang');
   if (lang && lang_enabled.includes(lang)) {
     return lang;
   }
