@@ -1,0 +1,20 @@
+{
+  "name": "jump-links",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@solid-primitives/i18n": "^1.4.0",
+    "@solidjs/router": "^0.7.0",
+    "solid-js": "^1.6.10"
+  },
+  "devDependencies": {
+    "vite": "^4.1.1",
+    "vite-plugin-solid": "^2.5.0"
+  }
+}

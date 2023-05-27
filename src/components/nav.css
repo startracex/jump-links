@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: 0;
+  overflow: hidden;
+  transition: height .3s;
+  background: var(--bar);
+  outline: .4em var(--bar)solid;
+}
+
+header {
+  height: 1.5em;
+  font-size: 22px;
+  position: fixed;
+  width: 100%;
+}
+
+header:hover nav {
+  height: 2.5em;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+nav div>* {
+  margin: 4px;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}

@@ -1,0 +1,68 @@
+:root,
+:root[data-theme="dark"] {
+  --surface: rgb(15 23 42);
+  --text: rgb(229 231 235);
+  --bar: rgb(30 41 59);
+  --super: rgb(0 98 226);
+  --selection: rgb(65, 152, 245);
+  --shadow: rgb(174 179 189 / 12%);
+  --card: rgb(18 31 58);
+  transition: .3s;
+}
+
+:root[data-theme="light"] {
+  --surface: rgb(220 226 234);
+  --bar: rgb(203 213 225);
+  --text: rgb(30 41 55);
+  --super: rgb(0 98 226);
+  --selection: rgb(65, 152, 245);
+  --shadow: rgb(30 41 55 / 12%);
+  --card: rgb(193 205 215);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  height: 100%;
+  color: var(--text);
+  font-size: 22px;
+}
+
+pre {
+  font-family: system-ui;
+}
+
+::selection {
+  color: #00a6ff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+#root>main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: var(--surface);
+}
+
+hr {
+  width: 94%;
+  margin: auto .25em;
+  border: currentColor 1.2px solid;
+  border-radius: .6px;
+}
