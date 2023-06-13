@@ -1,6 +1,6 @@
 import { useParams } from "@solidjs/router";
 import { useRouteData } from '@solidjs/router';
-import Card from "../components/card";
+import Card from "../../components/card";
 import { useI18n } from "@solid-primitives/i18n";
 export default () => {
   const [t] = useI18n();
@@ -11,9 +11,9 @@ export default () => {
     url: val || "/about",
   });
   if (val) {
-    setTimeout(() => {
-      window.location.href = val;
-    }, 1500);
+    const attached = location.pathname.split('/').slice(2);
+    const href = val + "/" + attached.join('/') + location.search;
+    window.location.href = href;
     return <Card target={val} message={message}></Card>;
   } else {
     return <Card target={null} type="info" message={message}></Card>;

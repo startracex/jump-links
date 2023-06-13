@@ -19,4 +19,9 @@ export const routes: RouteDefinition[] = [
     component: lazy(() => import('./pages/auto')),
     data
   },
+  {
+    path: '/:auto/*any',
+    component: lazy(() => import('./pages/auto/any')),
+    data
+  },
 ];

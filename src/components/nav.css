@@ -9,13 +9,14 @@ nav {
 }
 
 header {
-  height: 1.5em;
+  height: 3em;
   font-size: 22px;
   position: fixed;
   width: 100%;
 }
 
 header:hover nav {
+  padding-top: .4em;
   height: 2.5em;
 }
 

@@ -62,7 +62,7 @@ a {
 
 hr {
   width: 94%;
-  margin: auto .25em;
+  margin: .25em auto;
   border: currentColor 1.2px solid;
   border-radius: .6px;
 }
