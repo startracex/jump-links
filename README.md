@@ -9,5 +9,6 @@ jump_map.json
 ```
 
 /:domain -> url/
+/:domain# -> iframe src=url/
 
 /:domail/*any -> url/any

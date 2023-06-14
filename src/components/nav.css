@@ -8,6 +8,14 @@ nav {
   outline: .4em var(--bar)solid;
 }
 
+:root[data-iframe="true"] header {
+  height: .4em;
+}
+
+:root[data-iframe="true"] iframe {
+  margin-top: 0.4em;
+}
+
 header {
   height: 3em;
   font-size: 22px;

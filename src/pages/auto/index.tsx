@@ -10,7 +10,12 @@ export default () => {
   const message = t("jump_to", {
     url: val || "/about",
   });
+  const iframe = location.href.indexOf("#") > -1;
   if (val) {
+    if (iframe) {
+      document.documentElement.setAttribute("data-iframe", "true");
+      return <iframe src={val} style="width:100%;height:100%;border:none;"></iframe>;
+    }
     window.location.href = val;
     return <Card target={val} message={message}></Card>;
   } else {
