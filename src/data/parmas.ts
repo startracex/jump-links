@@ -14,6 +14,6 @@ const params: parmasType = {
   type: SearchParams.get("type"),
   delay: SearchParams.get("delay"),
   message: SearchParams.get("message"),
-  theme: SearchParams.get("theme") as themeType | null,
+  theme: SearchParams.get("theme") as themeType,
 };
 export default params;

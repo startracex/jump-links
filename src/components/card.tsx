@@ -19,9 +19,11 @@ export default function Card(props: parmasType) {
     }
   }
   return <div class="card">
-    <Icons type={props.type}></Icons>
+    <div id="icon">
+      <Icons type={props.type}></Icons>
+    </div>
     <hr />
-    <section>
+    <section title={props.target || "/about"}>
       {props.message}
     </section>
     <aside>

@@ -13,8 +13,7 @@ const lightIcon = <svg width="38" height="38" viewBox="0 0 48 48" fill="none">
   <path d="M38.8495 9.15088L36.6221 11.3783" stroke="currentColor" stroke-width="3" stroke-linecap="round"
     stroke-linejoin="round" />
   <path d="M24 3V6.15" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path
-    d="M24 36C30.6274 36 36 30.6274 36 24C36 17.3726 30.6274 12 24 12C17.3726 12 12 17.3726 12 24C12 30.6274 17.3726 36 24 36Z"
+  <path d="M24 36C30.6274 36 36 30.6274 36 24C36 17.3726 30.6274 12 24 12C17.3726 12 12 17.3726 12 24C12 30.6274 17.3726 36 24 36Z"
     fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
   <path d="M24 45.0001V41.8501" stroke="currentColor" stroke-width="3" stroke-linecap="round"
     stroke-linejoin="round" />
@@ -25,13 +24,13 @@ const darkIcon = <svg width="38" height="38" viewBox="0 0 48 48" fill="none">
     fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
 </svg>;
 export default function Theme() {
-  let signal: themeType;
+  let initialTheme: themeType;
   if (params.theme && ["dark", "light"].includes(params.theme)) {
-    signal = params.theme;
+    initialTheme = params.theme;
   } else {
-    signal = localStorage.getItem("theme") || window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    initialTheme = localStorage.getItem("theme") || window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
-  const [theme, setTheme] = createSignal(signal);
+  const [theme, setTheme] = createSignal(initialTheme);
   const changeTheme = (theme: themeType) => {
     setTheme(theme);
     document.documentElement.setAttribute("data-theme", theme);
